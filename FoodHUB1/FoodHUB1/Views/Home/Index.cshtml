@@ -1,0 +1,106 @@
+﻿
+<head>
+    <link href="../../CustomCSS/StyleSheet1.css" rel="stylesheet" type="text/css" />
+<!--
+    <script>
+
+        $('#myCarousel').carousel({
+            interval: 40000
+        });
+
+        $('.carousel .item').each(function () {
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+
+            if (next.next().length > 0) {
+
+                next.next().children(':first-child').clone().appendTo($(this)).addClass('rightest');
+
+            }
+            else {
+                $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+
+            }
+        });
+    </script>-->
+</head>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="row " >
+             <div id="myCarousel" class="carousel slide">
+                 <div class="carousel-inner">
+                     
+                        <div class="item active">       
+                                <img src="~/Images/Deals/1.jpg" class="slider_img">
+                        </div>
+                         <div class="item">
+                                 <img src="~/Images/Deals/2.jpg" alt="" class="slider_img">
+                         </div>
+                         <div class="item">
+                             <img src="~/Images/Deals/3.jpg" alt="" class="slider_img">
+                         </div>
+                         <div class="item">
+                             <img src="~/Images/Deals/4.jpg" alt="" class="slider_img">
+                         </div>
+                         <div class="item">
+                             <img src="~/Images/Deals/5.jpg" alt="" class="slider_img">
+                         </div>
+                         <div class="item">
+                             <img src="~/Images/Deals/6.jpg" alt="" class="slider_img">
+                         </div>
+                         <div class="item">
+                             <img src="~/Images/Deals/7.jpg" alt="" class="slider_img">
+                         </div>
+                     
+                 </div>
+                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+                 <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+             </div>
+</div>
+<div class="row" id="div_margin">
+    <h2>Food Outlets</h2>
+</div>
+<div class="row">
+    <div class="col-md-3">
+       <a href="http://localhost:60898/Products/ProductsByRestaurant/1"> <img src="~/Images/Logos/McDonalds.jpg" class="img-rounded" width="200" height="200" /></a>
+        <h2>McDonalds</h2>
+        <p>
+          Fast Food
+        </p>
+    </div>
+    <div class="col-md-3">
+        <a href="http://localhost:60898/Products/ProductsByRestaurant/1">
+            <img src="~/Images/Logos/Kfc.jpeg" class="img-rounded" width="200" height="200" />
+            </a>
+            <h2>KFC</h2>
+            <p>
+                Fast Food
+            </p>
+</div>
+    <div class="col-md-3">
+        <a href="http://localhost:60898/Restaurants/2">
+            <img src="~/Images/Logos/Burgerking.jpg" class="img-rounded" width="200" height="200" />
+    </a>
+                    <h2>Burger King</h2>
+            <p>
+                Fast Food
+            </p>
+</div>
+    <div class="col-md-3">
+        <a href="http://localhost:60898/Restaurants/2">
+            <img src="~/Images/Logos/Subway.jpg" class="img-rounded" width="200" height="200" />
+            </a>
+            <h2>Subway</h2>
+            <p>
+                Fast Food
+            </p>
+</div>
+</div>
+
+

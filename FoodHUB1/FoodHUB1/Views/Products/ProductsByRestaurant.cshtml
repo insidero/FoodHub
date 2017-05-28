@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "ProductsByRestaurant";
+}
+@model IEnumerable<FoodHUB1.Models.Product>
+
+
+<div class="row ">
+    <div id="myCarousel" class="carousel slide">
+
+
+        <div class="carousel-inner">
+@foreach (var item in Model)
+{
+            <div class="item active">
+               
+                <img src="@item.productImageUrl" class="slider_img">
+                
+            </div>
+}
+        </div>
+
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+    </div>
+</div>
+
+<h2>Products By Restaurant:
+    @Html.DisplayNameFor(model => model.restaurant.Name)</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.restaurant.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+       
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.restaurant.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+           
+            
+             <td>
+                 <p class="button">
+                     @Html.ActionLink("Add to cart", "AddToCartR", "ShoppingCart", new {id = item.Id}, null)
+                 </p>@Html.ActionLink("Details",
+"ProductDetails", "Products", new { Id = item.Id }, null)
+
+
+            </td>
+        </tr>
+
+    }
+    
+</table>
+
+

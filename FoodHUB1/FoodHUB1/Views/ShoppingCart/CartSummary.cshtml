@@ -1,0 +1,7 @@
+﻿@model FoodHUB1.Models.Cart
+
+
+@Html.ActionLink("Cart(" + ViewData["CartCount"] + ")",
+    "Index",
+    "ShoppingCart",
+    new { id = "cart-status" })
